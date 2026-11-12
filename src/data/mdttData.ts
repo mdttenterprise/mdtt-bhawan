@@ -1,0 +1,301 @@
+export interface FacilityItem {
+  id: string;
+  slug: string;
+  title: string;
+  tagline: string;
+  description: string;
+  image: string;
+  features: string[];
+}
+
+export interface RoomItem {
+  id: string;
+  type: "Single Occupancy" | "Double Occupancy";
+  title: string;
+  occupancy: string;
+  areaPlaceholder: string;
+  pricePlaceholder: string;
+  billingCycle: string;
+  description: string;
+  image: string;
+  amenities: string[];
+}
+
+export interface MenuItem {
+  id: string;
+  name: string;
+  category: "Breakfast" | "Lunch & Thali" | "Snacks & Beverages" | "Dinner";
+  pricePlaceholder: string;
+  description: string;
+  isVeg: boolean;
+}
+
+export interface GalleryItem {
+  id: string;
+  title: string;
+  category:
+    | "Building"
+    | "Library"
+    | "Single Rooms"
+    | "Double Rooms"
+    | "Canteen"
+    | "Common Areas";
+  image: string;
+  caption: string;
+}
+
+export const SITE_INFO = {
+  name: "MDTT Bhawan",
+  tagline: "Learn, Live & Experience Comfort Under One Roof.",
+  phonePlaceholder: "+91 XXXXX XXXXX",
+  whatsappNumberPlaceholder: "91XXXXXXXXXX",
+  emailPlaceholder: "info@mdttbhawan.example.com",
+  addressPlaceholder: "Plot No. XX, Institutional & Residency Block, City Name – XXXXXX",
+  visitingHoursPlaceholder: "Monday – Sunday: 08:00 AM – 08:00 PM",
+};
+
+export const FACILITIES: FacilityItem[] = [
+  {
+    id: "library",
+    slug: "/library",
+    title: "Quiet Study Library",
+    tagline: "Dedicated Reading & Exam Preparation Zone",
+    description:
+      "A calm, acoustically buffered reading environment engineered for deep concentration, uninterrupted study sessions, and academic excellence.",
+    image:
+      "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=80",
+    features: [
+      "Ergonomic seating & individual study desks",
+      "Glare-free LED task lighting",
+      "Pin-drop silence & disciplined ambience",
+      "Power outlets at study stations",
+    ],
+  },
+  {
+    id: "single-rooms",
+    slug: "/rooms",
+    title: "Single Occupancy Rooms",
+    tagline: "Private & Focused Personal Living",
+    description:
+      "Thoughtfully furnished private rooms crafted for residents who prefer complete privacy, quiet rest, and a dedicated in-room study corner.",
+    image:
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80",
+    features: [
+      "Single wooden bed with comfortable mattress",
+      "Dedicated study table & ergonomic chair",
+      "Spacious lockable wardrobe & storage",
+      "Natural cross-ventilation & bright lighting",
+    ],
+  },
+  {
+    id: "double-rooms",
+    slug: "/rooms",
+    title: "Double Occupancy Rooms",
+    tagline: "Balanced Twin-Sharing Comfort",
+    description:
+      "Well-proportioned twin-sharing rooms offering individual beds, separate study spaces, and organized personal storage for two residents.",
+    image:
+      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80",
+    features: [
+      "Two separate beds with ample walking space",
+      "Dual study desks & chairs",
+      "Individual lockable cupboards",
+      "Large windows for daylight & airflow",
+    ],
+  },
+  {
+    id: "canteen",
+    slug: "/canteen",
+    title: "Hygienic Dining & Canteen",
+    tagline: "Fresh Meals & Refreshments Daily",
+    description:
+      "A clean, welcoming in-house dining hall serving wholesome homestyle meals, snacks, and hot beverages prepared under strict hygiene protocols.",
+    image:
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
+    features: [
+      "Freshly prepared daily meals & tea",
+      "Sanitized kitchen & RO drinking water",
+      "Spacious, well-lit seating area",
+      "Quick service between study schedules",
+    ],
+  },
+];
+
+export const ROOMS_DATA: RoomItem[] = [
+  {
+    id: "single-deluxe",
+    type: "Single Occupancy",
+    title: "Single Occupancy Room",
+    occupancy: "1 Resident (Private)",
+    areaPlaceholder: "Approx. XXX Sq. Ft.",
+    pricePlaceholder: "₹X,XXX",
+    billingCycle: "/ month (Placeholder Tariff)",
+    description:
+      "Ideal for students and professionals seeking uninterrupted privacy. Includes a comfortable single bed, private study desk, lockable wardrobe, and ample ventilation.",
+    image:
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80",
+    amenities: [
+      "Private Single Occupancy",
+      "Comfortable Bed & Mattress",
+      "Dedicated Study Table & Chair",
+      "Lockable Wardrobe & Overhead Storage",
+      "Warm & Task Room Lighting",
+      "Large Window for Cross-Ventilation",
+    ],
+  },
+  {
+    id: "double-executive",
+    type: "Double Occupancy",
+    title: "Double Occupancy Room",
+    occupancy: "2 Residents (Twin Sharing)",
+    areaPlaceholder: "Approx. XXX Sq. Ft.",
+    pricePlaceholder: "₹X,XXX",
+    billingCycle: "/ month per person (Placeholder Tariff)",
+    description:
+      "Designed for two residents with clearly demarcated personal zones. Features two comfortable beds, two separate study stations, and individual storage units.",
+    image:
+      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80",
+    amenities: [
+      "Comfortable Twin Sharing (2 Beds)",
+      "Separate Study Tables & Chairs",
+      "Individual Lockable Storage Wardrobes",
+      "Balanced Ambient & Study Lighting",
+      "Well-Ventilated Exterior Windows",
+      "Daily Common Corridor Housekeeping",
+    ],
+  },
+];
+
+export const CANTEEN_MENU: MenuItem[] = [
+  {
+    id: "m1",
+    name: "Poha & Masala Chai Combo",
+    category: "Breakfast",
+    pricePlaceholder: "₹XX",
+    description: "Light flattened rice tempered with curry leaves, peanuts, and fresh ginger tea.",
+    isVeg: true,
+  },
+  {
+    id: "m2",
+    name: "Stuffed Aloo Paratha with Curd",
+    category: "Breakfast",
+    pricePlaceholder: "₹XX",
+    description: "Two whole-wheat stuffed flatbreads served with fresh curd and pickle.",
+    isVeg: true,
+  },
+  {
+    id: "m3",
+    name: "Standard Homestyle Veg Thali",
+    category: "Lunch & Thali",
+    pricePlaceholder: "₹XXX",
+    description: "Seasonal sabzi, dal tadka, steamed rice, 4 chapatis, salad, and papad.",
+    isVeg: true,
+  },
+  {
+    id: "m4",
+    name: "Rajma Chawal Bowl",
+    category: "Lunch & Thali",
+    pricePlaceholder: "₹XX",
+    description: "Slow-cooked kidney beans in aromatic gravy served over steamed basmati rice.",
+    isVeg: true,
+  },
+  {
+    id: "m5",
+    name: "Veg Grilled Sandwich",
+    category: "Snacks & Beverages",
+    pricePlaceholder: "₹XX",
+    description: "Toasted multi-grain bread layered with fresh vegetables and mint chutney.",
+    isVeg: true,
+  },
+  {
+    id: "m6",
+    name: "Ginger Cardamom Tea / Filter Coffee",
+    category: "Snacks & Beverages",
+    pricePlaceholder: "₹XX",
+    description: "Freshly brewed hot beverages to refresh you during study breaks.",
+    isVeg: true,
+  },
+  {
+    id: "m7",
+    name: "Paneer Curry & Phulka Meal",
+    category: "Dinner",
+    pricePlaceholder: "₹XXX",
+    description: "Cottage cheese curry served with 4 soft phulkas, dal, and jeera rice.",
+    isVeg: true,
+  },
+  {
+    id: "m8",
+    name: "Khichdi & Kadhi Comfort Plate",
+    category: "Dinner",
+    pricePlaceholder: "₹XX",
+    description: "Light, easy-to-digest moong dal khichdi paired with spiced yogurt kadhi.",
+    isVeg: true,
+  },
+];
+
+export const GALLERY_ITEMS: GalleryItem[] = [
+  {
+    id: "g1",
+    title: "MDTT Bhawan Exterior Facade",
+    category: "Building",
+    image:
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    caption: "Modern architectural exterior designed for durability, safety, and natural light.",
+  },
+  {
+    id: "g2",
+    title: "Main Silent Reading Hall",
+    category: "Library",
+    image:
+      "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=80",
+    caption: "Quiet, distraction-free study desks with ergonomic chairs and focused lighting.",
+  },
+  {
+    id: "g3",
+    title: "Single Occupancy Private Room",
+    category: "Single Rooms",
+    image:
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80",
+    caption: "Private bedroom with dedicated study corner, wardrobe, and natural ventilation.",
+  },
+  {
+    id: "g4",
+    title: "Double Occupancy Twin Room",
+    category: "Double Rooms",
+    image:
+      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80",
+    caption: "Spacious twin-sharing accommodation with separate beds and study stations.",
+  },
+  {
+    id: "g5",
+    title: "Hygienic Canteen Dining Hall",
+    category: "Canteen",
+    image:
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
+    caption: "Clean, sunlit dining space serving fresh homestyle meals and refreshments.",
+  },
+  {
+    id: "g6",
+    title: "Reception & Common Lounge",
+    category: "Common Areas",
+    image:
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+    caption: "Well-maintained lobby and common lounge area for residents and visitors.",
+  },
+  {
+    id: "g7",
+    title: "Evening Study Zone",
+    category: "Library",
+    image:
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1200&q=80",
+    caption: "Warm, eye-friendly ambient illumination for extended evening study sessions.",
+  },
+  {
+    id: "g8",
+    title: "Fresh Meal Preparation",
+    category: "Canteen",
+    image:
+      "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80",
+    caption: "Wholesome, balanced meals prepared fresh every day.",
+  },
+];
