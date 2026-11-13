@@ -12,7 +12,7 @@ export default function HeroSection() {
           {/* Left Content */}
           <div className="lg:col-span-6 space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs font-semibold tracking-wider uppercase">
-              <span>Library • Rooms • Canteen</span>
+              <span>  Rooms • Library • Canteen</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.12]">

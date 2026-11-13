@@ -60,10 +60,20 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-1" />
                 <span>{SITE_INFO.addressPlaceholder}</span>
               </li>
-              <li className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-amber-400 shrink-0" />
-                <span>{SITE_INFO.phonePlaceholder}</span>
-              </li>
+             <li className="flex items-start gap-2.5">
+  <Phone className="w-4 h-4 text-amber-400 shrink-0 mt-1" />
+  <div className="flex flex-wrap gap-1">
+    {SITE_INFO.phoneNumbers.slice(0, 4).map((item, idx) => (
+      <a
+        key={idx}
+        href={`tel:${item.number.replace(/\s+/g, "")}`}
+        className="hover:text-amber-400 transition-colors"
+      >
+        {item.number}
+      </a>
+    ))}
+  </div>
+</li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-amber-400 shrink-0" />
                 <span>{SITE_INFO.emailPlaceholder}</span>

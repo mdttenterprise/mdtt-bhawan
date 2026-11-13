@@ -36,7 +36,7 @@ export default function Navbar() {
                   MDTT <span className="text-amber-400">Bhawan</span>
                 </span>
                 <span className="text-[11px] uppercase tracking-widest text-slate-400">
-                  Study • Stay • Dine
+                  Stay • Study • Dine
                 </span>
               </div>
             </Link>

@@ -44,15 +44,32 @@ export interface GalleryItem {
   caption: string;
 }
 
+// export const SITE_INFO = {
+//   name: "MDTT Bhawan",
+//   tagline: "Learn, Live & Experience Comfort Under One Roof.",
+//   phonePlaceholder: "+91 9721712640",
+//   whatsappNumberPlaceholder: "9721712640",
+//   emailPlaceholder: "libmddt@gmail.com",
+//   addressPlaceholder: "110 - MDTT Bhawan, Rani Vihar Colony, Uttardhauna, Tiwariganj, Chinhat, Lucknow, Uttar Pradesh – 226028, India.",
+//   visitingHoursPlaceholder: "Monday – Sunday: 08:00 AM – 08:00 PM",
+// };
 export const SITE_INFO = {
   name: "MDTT Bhawan",
   tagline: "Learn, Live & Experience Comfort Under One Roof.",
-  phonePlaceholder: "+91 9721712640",
-  whatsappNumberPlaceholder: "9721712640",
+  phoneNumbers: [
+    { label: "Reception / General Enquiry", number: "+91 9721712640" },
+    { label: "Room & Hostel Booking", number: "+91 77100 24920" },
+    { label: "Library ", number: "+91 96935 36008" },
+        { label: "Canteen Desk", number: "+91 7032182405" },
+
+  ],
+  whatsappNumberPlaceholder: "+91 9721712640",
+    phonePlaceholder: "+91 9721712640",
   emailPlaceholder: "libmddt@gmail.com",
   addressPlaceholder: "110 - MDTT Bhawan, Rani Vihar Colony, Uttardhauna, Tiwariganj, Chinhat, Lucknow, Uttar Pradesh – 226028, India.",
-  visitingHoursPlaceholder: "Monday – Sunday: 08:00 AM – 08:00 PM",
+  visitingHoursPlaceholder: "Monday – Sunday: 08:00 AM – 10:00 PM",
 };
+
 
 export const FACILITIES: FacilityItem[] = [
   {
@@ -67,6 +84,8 @@ export const FACILITIES: FacilityItem[] = [
     features: [
       "Ergonomic seating & individual study desks",
       "Glare-free LED task lighting",
+         "High-Speed Free Wi-Fi", 
+  "24/7 Purified RO Drinking Water", 
       "Pin-drop silence & disciplined ambience",
       "Power outlets at study stations",
     ],
@@ -83,6 +102,8 @@ export const FACILITIES: FacilityItem[] = [
     features: [
       "Single wooden bed with comfortable mattress",
       "Dedicated study table & ergonomic chair",
+         "High-Speed Free Wi-Fi", 
+  "24/7 Purified RO Drinking Water", 
       "Spacious lockable wardrobe & storage",
       "Natural cross-ventilation & bright lighting",
     ],
@@ -99,6 +120,8 @@ export const FACILITIES: FacilityItem[] = [
     features: [
       "Two separate beds with ample walking space",
       "Dual study desks & chairs",
+         "High-Speed Free Wi-Fi", 
+  "24/7 Purified RO Drinking Water", 
       "Individual lockable cupboards",
       "Large windows for daylight & airflow",
     ],
@@ -116,6 +139,8 @@ export const FACILITIES: FacilityItem[] = [
       "Freshly prepared daily meals & tea",
       "Sanitized kitchen & RO drinking water",
       "Spacious, well-lit seating area",
+         "High-Speed Free Wi-Fi", 
+  "24/7 Purified RO Drinking Water", 
       "Quick service between study schedules",
     ],
   },
@@ -128,7 +153,7 @@ export const ROOMS_DATA: RoomItem[] = [
     title: "Single Occupancy Room",
     occupancy: "1 Resident (Private)",
     areaPlaceholder: "Approx. XXX Sq. Ft.",
-    pricePlaceholder: "₹3,000",
+    pricePlaceholder: "₹3200",
     billingCycle: "/ month (Placeholder Tariff)",
     description:
       "Ideal for students and professionals seeking uninterrupted privacy. Includes a comfortable single bed, private study desk, lockable wardrobe, and ample ventilation.",
@@ -137,6 +162,8 @@ export const ROOMS_DATA: RoomItem[] = [
     amenities: [
       "Private Single Occupancy",
       "Comfortable Bed & Mattress",
+      "High-Speed Free Wi-Fi", 
+  "24/7 Purified RO Drinking Water", 
       "Dedicated Study Table & Chair",
       "Lockable Wardrobe & Overhead Storage",
       "Warm & Task Room Lighting",
@@ -158,6 +185,8 @@ export const ROOMS_DATA: RoomItem[] = [
     amenities: [
       "Comfortable Twin Sharing (2 Beds)",
       "Separate Study Tables & Chairs",
+      "High-Speed Free Wi-Fi", 
+  "24/7 Purified RO Drinking Water", 
       "Individual Lockable Storage Wardrobes",
       "Balanced Ambient & Study Lighting",
       "Well-Ventilated Exterior Windows",

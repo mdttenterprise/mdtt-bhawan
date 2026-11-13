@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
-import ContactForm from "@/components/ContactForm";
+// import ContactForm from "@/components/ContactForm"; // जब फॉर्म ऑन करें तब अनकमेंट करें
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { SITE_INFO } from "@/data/mdttData";
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  // Set these to true when you want to un-comment/enable Map or Form later
+  // Set these to true when you want to enable Map or Form later
   const showMap = false;
   const showForm = false;
   const isCenteredSingleColumn = !showForm;
@@ -20,9 +20,8 @@ export default function ContactPage() {
     <div className="min-h-screen bg-slate-50/60">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-[#0B192C] text-white py-20 px-4 sm:px-6 lg:px-8">
-        {/* Subtle decorative background glow */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(251,191,36,0.12),transparent_50%)] pointer-events-none" />
-        
+
         <div className="relative max-w-4xl mx-auto text-center space-y-4">
           <span className="inline-block px-3.5 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-xs font-bold uppercase tracking-[0.2em] text-amber-400">
             Get In Touch
@@ -56,25 +55,32 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <div className="space-y-5 text-sm">
-                {/* Phone */}
-                <a
-                  href={`tel:${SITE_INFO.phonePlaceholder}`}
-                  className="group flex items-start gap-4 p-3 -mx-3 rounded-2xl hover:bg-slate-50 transition-colors"
-                >
-                  <div className="w-11 h-11 rounded-xl bg-amber-500/10 text-amber-600 group-hover:bg-amber-500 group-hover:text-white flex items-center justify-center shrink-0 transition-colors">
+              <div className="space-y-4 text-sm">
+                {/* 3 Phone Numbers (Aligned with other items) */}
+                <div className="flex items-start gap-4 p-3 -mx-3 rounded-2xl">
+                  <div className="w-11 h-11 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between">
-                      <p className="font-bold text-[#0B192C]">Phone Number</p>
-                      <ArrowUpRight className="w-4 h-4 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="flex-1 space-y-2.5">
+                    <p className="font-bold text-[#0B192C]">Phone Numbers</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {SITE_INFO.phoneNumbers.map((item, index) => (
+                        <a
+                          key={index}
+                          href={`tel:${item.number.replace(/\s+/g, "")}`}
+                          className="group block p-2.5 rounded-xl bg-slate-50 hover:bg-amber-50/70 border border-slate-100 hover:border-amber-200 transition-all"
+                        >
+                          <span className="text-[11px] font-semibold text-slate-500 block">
+                            {item.label}
+                          </span>
+                          <span className="font-bold text-slate-800 group-hover:text-amber-700 transition-colors mt-0.5 block">
+                            {item.number}
+                          </span>
+                        </a>
+                      ))}
                     </div>
-                    <p className="text-slate-600 mt-0.5 font-medium">
-                      {SITE_INFO.phonePlaceholder}
-                    </p>
                   </div>
-                </a>
+                </div>
 
                 {/* Email */}
                 <a
@@ -127,7 +133,7 @@ export default function ContactPage() {
             </div>
 
             {/* Google Maps Embed Placeholder (Toggle showMap = true to enable) */}
-            {/* {showMap && (
+            {showMap && (
               <div className="bg-slate-200/70 rounded-3xl overflow-hidden border border-slate-300/80 h-64 flex flex-col items-center justify-center text-center p-6">
                 <MapPin className="w-10 h-10 text-[#0B192C] mb-2" />
                 <p className="font-bold text-[#0B192C]">Google Maps Location Placeholder</p>
@@ -136,7 +142,7 @@ export default function ContactPage() {
                   once the exact building coordinates are finalized.
                 </p>
               </div>
-            )} */}
+            )}
           </div>
 
           {/* Frontend Validated Form (Toggle showForm = true to enable) */}
