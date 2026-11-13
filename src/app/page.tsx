@@ -40,7 +40,7 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6">
             <img
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
+              src="images/building.png"
               alt="MDTT Bhawan Interior"
               className="rounded-3xl shadow-xl w-full h-[380px] object-cover"
             />

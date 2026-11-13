@@ -42,7 +42,7 @@ export default function CanteenPage() {
 
           <div className="lg:col-span-6">
             <img
-              src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1300&q=85"
+              src="images/mixturecanteen.jpeg"
               alt="MDTT Bhawan Canteen and Dining Hall"
               className="rounded-3xl shadow-2xl w-full h-[380px] object-cover border border-white/15"
             />

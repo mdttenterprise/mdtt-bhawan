@@ -34,9 +34,9 @@ const LIBRARY_FEATURES = [
 ];
 
 const LIBRARY_PHOTOS = [
-  "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=900&q=80",
+  "images/library2.jpeg",
+  "images/library.jpeg",
+  "images/discussion.jpeg",
 ];
 
 export default function LibraryPage() {
@@ -73,7 +73,7 @@ export default function LibraryPage() {
 
           <div className="lg:col-span-6">
             <img
-              src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1300&q=85"
+              src="images/library2.jpeg"
               alt="MDTT Bhawan Silent Reading Library"
               className="rounded-3xl shadow-2xl w-full h-[400px] object-cover border border-white/15"
             />

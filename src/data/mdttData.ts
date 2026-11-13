@@ -47,10 +47,10 @@ export interface GalleryItem {
 export const SITE_INFO = {
   name: "MDTT Bhawan",
   tagline: "Learn, Live & Experience Comfort Under One Roof.",
-  phonePlaceholder: "+91 XXXXX XXXXX",
-  whatsappNumberPlaceholder: "91XXXXXXXXXX",
-  emailPlaceholder: "info@mdttbhawan.example.com",
-  addressPlaceholder: "Plot No. XX, Institutional & Residency Block, City Name – XXXXXX",
+  phonePlaceholder: "+91 9721712640",
+  whatsappNumberPlaceholder: "9721712640",
+  emailPlaceholder: "libmddt@gmail.com",
+  addressPlaceholder: "110 - MDTT Bhawan, Rani Vihar Colony, Uttardhauna, Tiwariganj, Chinhat, Lucknow, Uttar Pradesh – 226028, India.",
   visitingHoursPlaceholder: "Monday – Sunday: 08:00 AM – 08:00 PM",
 };
 
@@ -63,7 +63,7 @@ export const FACILITIES: FacilityItem[] = [
     description:
       "A calm, acoustically buffered reading environment engineered for deep concentration, uninterrupted study sessions, and academic excellence.",
     image:
-      "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=80",
+      "/images/library.jpeg",
     features: [
       "Ergonomic seating & individual study desks",
       "Glare-free LED task lighting",
@@ -79,7 +79,7 @@ export const FACILITIES: FacilityItem[] = [
     description:
       "Thoughtfully furnished private rooms crafted for residents who prefer complete privacy, quiet rest, and a dedicated in-room study corner.",
     image:
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80",
+      "images/single.jpeg",
     features: [
       "Single wooden bed with comfortable mattress",
       "Dedicated study table & ergonomic chair",
@@ -95,7 +95,7 @@ export const FACILITIES: FacilityItem[] = [
     description:
       "Well-proportioned twin-sharing rooms offering individual beds, separate study spaces, and organized personal storage for two residents.",
     image:
-      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80",
+      "images/building2.jpeg",
     features: [
       "Two separate beds with ample walking space",
       "Dual study desks & chairs",
@@ -111,7 +111,7 @@ export const FACILITIES: FacilityItem[] = [
     description:
       "A clean, welcoming in-house dining hall serving wholesome homestyle meals, snacks, and hot beverages prepared under strict hygiene protocols.",
     image:
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
+      "images/mixturecanteen.jpeg",
     features: [
       "Freshly prepared daily meals & tea",
       "Sanitized kitchen & RO drinking water",
@@ -128,12 +128,12 @@ export const ROOMS_DATA: RoomItem[] = [
     title: "Single Occupancy Room",
     occupancy: "1 Resident (Private)",
     areaPlaceholder: "Approx. XXX Sq. Ft.",
-    pricePlaceholder: "₹X,XXX",
+    pricePlaceholder: "₹3,000",
     billingCycle: "/ month (Placeholder Tariff)",
     description:
       "Ideal for students and professionals seeking uninterrupted privacy. Includes a comfortable single bed, private study desk, lockable wardrobe, and ample ventilation.",
     image:
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80",
+      "images/single.jpeg",
     amenities: [
       "Private Single Occupancy",
       "Comfortable Bed & Mattress",
@@ -149,12 +149,12 @@ export const ROOMS_DATA: RoomItem[] = [
     title: "Double Occupancy Room",
     occupancy: "2 Residents (Twin Sharing)",
     areaPlaceholder: "Approx. XXX Sq. Ft.",
-    pricePlaceholder: "₹X,XXX",
+    pricePlaceholder: "₹4800",
     billingCycle: "/ month per person (Placeholder Tariff)",
     description:
       "Designed for two residents with clearly demarcated personal zones. Features two comfortable beds, two separate study stations, and individual storage units.",
     image:
-      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80",
+      "images/building2.jpeg",
     amenities: [
       "Comfortable Twin Sharing (2 Beds)",
       "Separate Study Tables & Chairs",
@@ -239,7 +239,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "MDTT Bhawan Exterior Facade",
     category: "Building",
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+      "images/parking.png",
     caption: "Modern architectural exterior designed for durability, safety, and natural light.",
   },
   {
@@ -247,7 +247,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Main Silent Reading Hall",
     category: "Library",
     image:
-      "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=80",
+      "images/library.jpeg",
     caption: "Quiet, distraction-free study desks with ergonomic chairs and focused lighting.",
   },
   {
@@ -255,7 +255,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Single Occupancy Private Room",
     category: "Single Rooms",
     image:
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80",
+      "images/single.jpeg",
     caption: "Private bedroom with dedicated study corner, wardrobe, and natural ventilation.",
   },
   {
@@ -263,7 +263,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Double Occupancy Twin Room",
     category: "Double Rooms",
     image:
-      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80",
+      "images/double.jpeg",
     caption: "Spacious twin-sharing accommodation with separate beds and study stations.",
   },
   {
@@ -271,7 +271,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Hygienic Canteen Dining Hall",
     category: "Canteen",
     image:
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
+      "images/dining.jpeg",
     caption: "Clean, sunlit dining space serving fresh homestyle meals and refreshments.",
   },
   {
@@ -279,7 +279,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Reception & Common Lounge",
     category: "Common Areas",
     image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+      "images/building.png",
     caption: "Well-maintained lobby and common lounge area for residents and visitors.",
   },
   {
@@ -287,7 +287,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Evening Study Zone",
     category: "Library",
     image:
-      "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1200&q=80",
+      "images/library2.jpeg",
     caption: "Warm, eye-friendly ambient illumination for extended evening study sessions.",
   },
   {
@@ -295,7 +295,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Fresh Meal Preparation",
     category: "Canteen",
     image:
-      "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80",
+      "images/mixturecanteen.jpeg",
     caption: "Wholesome, balanced meals prepared fresh every day.",
   },
 ];

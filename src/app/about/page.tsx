@@ -49,12 +49,12 @@ export default function AboutPage() {
 
           <div className="lg:col-span-6 grid grid-cols-2 gap-4">
             <img
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+              src="images/parking.png"
               alt="MDTT Bhawan Building Exterior"
               className="rounded-2xl h-72 w-full object-cover shadow-md"
             />
             <img
-              src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80"
+              src="images/library.jpeg"
               alt="MDTT Bhawan Library Interior"
               className="rounded-2xl h-72 w-full object-cover shadow-md mt-6"
             />

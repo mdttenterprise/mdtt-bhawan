@@ -68,7 +68,7 @@ export default function HeroSection() {
           <div className="lg:col-span-6">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/15 group">
               <img
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=85"
+                src="images/parking.png"
                 alt="MDTT Bhawan Modern Multi-Facility Building"
                 className="w-full h-[420px] sm:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
               />
